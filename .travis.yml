@@ -149,6 +149,11 @@ jobs:
     - stage: Build
       before_script: *auto_skip
       env:
+        - NODE_VERSION: "10"
+        - VARIANT: "core"
+
+    - stage: Build
+      env:
         - NODE_VERSION: "6"
         - VARIANT: "jessie"
 
@@ -179,6 +184,11 @@ jobs:
     - stage: Build
       before_script: *auto_skip
       env:
+        - NODE_VERSION: "6"
+        - VARIANT: "core"
+
+    - stage: Build
+      env:
         - NODE_VERSION: "8"
         - VARIANT: "jessie"
 
@@ -208,6 +218,11 @@ jobs:
 
     - stage: Build
       before_script: *auto_skip
+      env:
+        - NODE_VERSION: "8"
+        - VARIANT: "core"
+
+    - stage: Build
       env:
         - NODE_VERSION: "chakracore/10"
         - VARIANT: "default"
